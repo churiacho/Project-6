@@ -1,0 +1,17 @@
+<nav>
+    <div>
+        <%= link_to "Move and Groove", root_path, class:"link" %>
+    </div>
+    <div>
+        <%= link_to "Activities", activities_path, class:"link" %>
+    </div>
+    <div>
+        <% if user_sign_in? %>
+            <p>Welcome, <%= current_user.username %></p>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <% else %>
+            <%= link_to new_user_session_path, "Login" %>
+            <%= link_to new_user_registration_path, "Sign Up" %>
+        <% end %>
+    </div>
+</nav>
