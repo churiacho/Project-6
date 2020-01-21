@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_01_20_213611) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "activities", force: :cascade do |t|
     t.string "name"
     t.date "date_field"
     t.integer "duration_minutes"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_activities_on_user_id"
@@ -28,6 +31,9 @@ ActiveRecord::Schema.define(version: 2020_01_20_213611) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
     t.string "first_name"
     t.string "last_name"
     t.text "about"
