@@ -12,24 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label "Activity Name" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :date_field %>
+    <%= form.label "Date" %>
     <%= form.date_select :date_field %>
   </div>
 
   <div class="field">
-    <%= form.label :duration_minutes %>
-    <%= form.number_field :duration_minutes %>
+    <%= form.label "Duration" %>
+    <%= form.number_field :duration_minutes %><p>Minutes</p>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

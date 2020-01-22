@@ -10,8 +10,8 @@
             <p>Welcome, <%= current_user.username %></p>
             <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         <% else %>
+            <%= link_to new_user_registration_path, "Sign up" %><br />
             <%= link_to new_user_session_path, "Login" %>
-            <%= link_to new_user_registration_path, "Sign Up" %>
         <% end %>
     </div>
 </nav>

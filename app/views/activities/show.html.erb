@@ -1,24 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Activity Name:</strong>
   <%= @activity.name %>
 </p>
 
 <p>
-  <strong>Date field:</strong>
+  <strong>Date:</strong>
   <%= @activity.date_field %>
 </p>
 
 <p>
-  <strong>Duration minutes:</strong>
-  <%= @activity.duration_minutes %>
+  <strong>Duration:</strong>
+  <%= @activity.duration_minutes %>minutes
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @activity.user_id %>
-</p>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>
