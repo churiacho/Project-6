@@ -12,9 +12,8 @@ class User < ApplicationRecord
 
   has_many :activities
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  # :confirmable, :lockable, :timeoutable, :trackable and :registerable, :omniauthable
+  devise :database_authenticatable, :recoverable, :rememberable, :validatable
 
   def self.find_for_database_authentication warden_condition
     conditions = warden_condition.dup
