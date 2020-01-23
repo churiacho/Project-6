@@ -14,6 +14,8 @@
   <body>
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/devise_notices' %>
-    <%= yield %>
+    <main>
+      <%= content_for?(:content) ? yield(:content) : yield %>
+    </main>
   </body>
 </html>

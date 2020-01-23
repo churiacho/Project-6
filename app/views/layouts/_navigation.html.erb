@@ -8,10 +8,9 @@
     <div>
         <% if user_signed_in? %>
             <p>Welcome, <%= current_user.username %></p>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
         <% else %>
-            <%= link_to new_user_registration_path, "Sign up" %><br />
-            <%= link_to new_user_session_path, "Login" %>
+            <%= link_to "Sign In / Sign up!", new_user_session_path %>
         <% end %>
     </div>
-</nav>
+</nav> 
