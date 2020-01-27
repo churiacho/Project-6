@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get 'sign_up', to: 'users/registrations#new'
     get 'forgot_password', to: 'users/passwords#new'
     get 'reset_password', to: 'users/passwords#edit'
+    get ':user/edit-profile' => 'devise/registrations#edit', :as => :edit_user_profile
   end
 
 
@@ -24,5 +25,6 @@ Rails.application.routes.draw do
   
   root to: 'pages#home'
   get 'signed-out', to: 'signouts#index'
+  get 'user-profile', to: 'users#profile'
   
 end
