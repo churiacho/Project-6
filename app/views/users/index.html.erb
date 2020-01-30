@@ -1,4 +1,10 @@
-<h2>PROFILE</h2>
+<div class="jumbotron display-4"><%= current_user.username %>'s Profile</div>
+<div>
+    <p><%= current_user.first_name %></p><br />
+    <p><%= current_user.last_name %></p><br />
+    <p><%= current_user.age %></p><br />
+    <p><%= current_user.bio %></p>
+</div>
 <div>
      <%= link_to "Edit account details", edit_user_profile_path(current_user) %>
 </div>

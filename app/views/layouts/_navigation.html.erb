@@ -1,24 +1,32 @@
-<nav>
-    <div>
-        <%= link_to "Move and Groove", root_path, class:"link" %>
-    </div>
-    <div>
-        <%= link_to "Activities", activities_path, class:"link" %>
-    </div>
-    <div>
-        <% if user_signed_in? %>
-            <div>
-                <p>Welcome, <%= current_user.username %></p>
-            </div>
-            <div>
-                <%= link_to "Profile", users_path, class: "link" %>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light nav-fill nav-justified">
+    <%= link_to "Move and Groove", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcontrol" aria-controls="navcontrol" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navcontrol">
+        <span class="navbar-text nav-item">
+                <% if user_signed_in? %>
+                        Welcome, <%= current_user.username %>
+                <% else %>
+                        Welcome, Guest
+                <% end %>
+        </span>
+                <% if user_signed_in? %>
+                    <%= link_to "Activities", activities_path, class: "nav-link" %>
+                    <%= link_to "Profile", users_path, class: "nav-link" %>
+         
 
-            <div>
-                <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-            </div>
-        <% else %>
-            <%= link_to "Sign In / Sign up!", new_user_session_path %>
-        <% end %>
+        
+                    <%= link_to "Sign Out",  destroy_user_session_path, class: "nav-link" %>
+         
+                <% else %>
+        
+                    <%= link_to "Sign In / Sign up!", new_user_session_path, class: "nav-link" %>
+        
+                    <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: "nav-link" %>
+         
+                <% end %>
+    
+        
     </div>
 </nav> 

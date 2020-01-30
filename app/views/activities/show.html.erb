@@ -7,12 +7,12 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @activity.date_field %>
+  <%= @activity.date_field.to_formatted_s(:long) %>
 </p>
 
 <p>
   <strong>Duration:</strong>
-  <%= @activity.duration_minutes %>minutes
+  <%= @activity.duration_minutes %> minutes
 </p>
 
 

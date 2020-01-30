@@ -1,0 +1,41 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.jumbotron {
+    text-align: center;
+}
+
+#activity-table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid grey;
+
+    th {
+        font-size: 2rem;
+        padding: 1em 0;
+        border-bottom: 1px solid grey;
+    }
+
+    td {
+        padding: 1em 0;
+    }
+
+    #overlay {
+        background-color: rgba(176, 224, 245, 0.517);
+
+        &:hover {
+            background-color: rgba(176, 224, 245, 0.7);
+        }
+    }
+
+
+    
+
+    #activity-change {
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        padding: none;
+ 
+    }
+
+}

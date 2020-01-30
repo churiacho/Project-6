@@ -9,6 +9,16 @@
     <%= f.label :username, class:"label" %><br />
     <%= f.text_field :username, autofocus: true, class:"input" %>
   </div>
+  
+  <div class="field">
+    <%= f.label :age, class: "label" %><br />
+    <%= f.number_field :age, autofocus: true, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bio, class:"label"%><br />
+    <%= f.text_field :bio, class:"input", autofocus: true %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
