@@ -29,8 +29,10 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", :class => 'btn btn-block' %>
+    <%= f.submit class: 'btn btn-block', value: "Create Account", id: "button" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="container col-8" >
+  <%= render "devise/shared/links" %>
+</div>

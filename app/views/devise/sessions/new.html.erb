@@ -22,10 +22,11 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Sign In", :class => "btn btn-block" %><br />
+    <%= f.submit class: 'btn btn-block btn-primary', value: "Sign In", id: "button" %><br />
+  </div>
+  <div class="col-8 container">
     <%= render "devise/shared/links" %>
   </div>
-
 </div>
 <% end %>
 
