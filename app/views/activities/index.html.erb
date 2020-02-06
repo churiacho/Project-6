@@ -6,12 +6,12 @@
 </div>
 
 <table class="container" id="activity-table">
-  <thead>
+  <thead class="jumbotron">
     <tr>
       <th>Activity</th>
       <th>Date</th>
       <th>Duration</th>
-      
+      <th></th>
     </tr>
   </thead>
 
@@ -26,8 +26,8 @@
           <%=  activity.duration_minutes %> minutes
         </td>
         <td id="activity-change">
-        <%= link_to 'Edit', edit_activity_path(activity) %>
-        <%= link_to 'x', activity, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_activity_path(activity), id: 'lnk-yellow' %>
+        <%= link_to 'x', activity, method: :delete, data: { confirm: 'Are you sure?' }, id:'del' %>
         </td>
 
       </tr>
@@ -39,5 +39,5 @@
 
 <br>
 
-<span><%= link_to 'New Activity', new_activity_path, class: "btn"%></span>
+<span><%= link_to 'New Activity', new_activity_path, class: "btn btn-outline-success", id: 'lnk-green' %></span>
 </div>

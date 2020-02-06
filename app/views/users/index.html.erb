@@ -1,9 +1,18 @@
 <div class="jumbotron display-4"><%= current_user.username %>'s Profile</div>
-<div>
-    <p>First Name: <%= current_user.username %></p><br />
-    <p>Age: <%= current_user.age %></p><br />
-    <p>Bio: <%= current_user.bio %></p>
+<div class="container">
+
+  <div class="card my-5">
+    <% if current_user.avatar.attached? %>
+      <%= image_tag user_avatar(current_user, 100), class: "rounded card-img-top" %>
+    <% end %>
+    <div class="card-body">
+      <h2 class="card-title my-2"><%= current_user.first_name %> <%= current_user.last_name %></h2>
+      <p class="card-text"><%= current_user.bio %></p>
+      <h5 class="card-text">Age: <%= current_user.age %></h5>
+    </div>
+  </div>
+
 </div>
-<div>
-     <%= link_to "Edit account details", edit_user_profile_path(current_user) %>
+<div class="container">
+  <%= link_to "Edit account details", edit_user_profile_path(current_user), class:"btn btn-outline-warning", id: 'btn-yel'%>
 </div>

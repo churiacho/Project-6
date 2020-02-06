@@ -22,6 +22,7 @@
 
     #overlay {
         background-color: rgba(176, 224, 245, 0.517);
+        border-bottom: 1px solid grey;
 
         &:hover {
             background-color: rgba(176, 224, 245, 0.7);
@@ -38,4 +39,57 @@
  
     }
 
+}
+#lnk-green {
+    color: green;
+    &:hover {
+        color: white;
+    }
+}
+
+#del {
+    color: red;
+    padding: 0.1rem 0.3rem;
+    border: 1px solid red;
+    border-radius: 15px;
+    background-color: white;
+    &:hover {
+        color: white;
+        background-color: red;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+}
+
+#lnk-yellow {
+    color: orange;
+    padding: 0.1rem 0.3rem;
+    border: 1px solid orange;
+    border-radius: 15px;
+    background-color: white;
+    &:hover {
+        color: white;
+        background-color: orange;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+}
+#nav-lnk {
+    color: #ffffff;
+    padding: 0.5em;
+    border-radius: 5px;
+    text-align: center;
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
+#nav-msg {
+    color: white;
+}
+#btn-yel {
+    color: orange;
+    &:hover {
+        color: white;
+    }
 }

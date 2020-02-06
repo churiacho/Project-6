@@ -1,25 +1,35 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light nav-fill nav-justified">
-    <%= link_to "Move and Groove", root_path, class: "navbar-brand" %>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-fill nav-justified">
+    <%= link_to "Move and Groove", root_path, class: "navbar-brand", id: "nav-lnk" %>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcontrol" aria-controls="navcontrol" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse justify-content-end" id="navcontrol">
-        <span class="navbar-text nav-item">
+        <span class="navbar-nav mr-auto mt-2 mt-md-0">
+        </span>
+        <span class="navbar-text nav-item" id="nav-msg">
                 <% if user_signed_in? %>
                         Welcome, <%= current_user.username %>
                 <% else %>
                         Welcome, Guest
                 <% end %>
         </span>
-            <%= link_to "Home", root_path, class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link col-1", id: "nav-lnk" %>
             
                 <% if user_signed_in? %>
-                    <%= link_to "Activities", activities_path, class: "nav-link" %>
-                    <%= link_to "Profile", users_path, class: "nav-link" %>
-         
+                    <%= link_to "Activities", activities_path, class: "nav-link col-1", id: "nav-lnk" %>
 
-        
-                    <%= link_to "Sign Out",  destroy_user_session_path, class: "nav-link" %>
+                    <div class="nav-item dropdown col-2">
+                        <%= link_to root_path, id: "navbar-dropdown", class: "nav-link dropdown-toggle", id: "nav-lnk", data: { toggle: "dropdown" }, aria: { haspopup: true, expanded: false } do %>
+                            <%= image_tag user_avatar(current_user, 20), class: "rounded-circle" %>
+                        <% end %>
+                        <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbar-dropdown">
+                        <%= link_to "Profile", users_path, class: "dropdown-item", id: "nav-lnk" %>
+                        <div class="dropdown-divider"></div>
+                        <%= link_to "Sign Out",  destroy_user_session_path, class: "dropdown-item", id: "nav-lnk" %>
+                    </div>
+                    
          
                 <% else %>
         

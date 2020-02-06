@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label "Activity Name" %>
-    <%= form.text_field :name %>
+    <%= form.select :name, Activity.names.keys.map %>
   </div>
 
   <div class="field">
