@@ -9,6 +9,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :recoverable, :rememberable, :validatable, :registerable, :omniauthable, :omniauth_providers => [:facebook]
   # verify your schema for the additional fields/columns
 
+  validates :avatar, presence: true, integrity: true, processing: true
+
+
 def self.new_with_session(params, session)
   super.tap do |user|
     if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
