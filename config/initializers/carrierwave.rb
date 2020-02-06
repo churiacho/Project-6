@@ -1,4 +1,4 @@
-# CarrierWave.configure do |config|
+CarrierWave.configure do |config|
 #     config.fog_provider = 'fog/aws'
 #     config.fog_credentials = {
 #         provider:                   'AWS',
@@ -10,5 +10,4 @@
 #     config.fog_directory    = 'moveandgroove'
 #     config.fog_public       = false
 #     config.fog_attributes   = { cache_control: "public, max-age=#{365.days.to_i}" }
-
-# end
+end
