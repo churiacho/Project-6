@@ -29,6 +29,10 @@
 /config/master.key
 
 /config/application.yml
+<<<<<<< HEAD
+=======
+
+>>>>>>> tmp
 /public/packs
 /public/packs-test
 /node_modules

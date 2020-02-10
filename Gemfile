@@ -3,8 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+
+gem 'dotenv-rails', groups: [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'devise', '~>4.7', '>=4.7.1'
+gem 'omniauth-facebook'
+gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
+gem 'gravatar'  
+gem 'carrierwave', '~> 2.0'
+gem 'fog-aws'
 # Use pg as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -41,11 +49,15 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+<<<<<<< HEAD
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
   gem 'better_errors', '~> 2.5', '>= 2.5.1'
 
+=======
+ #  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+>>>>>>> tmp
 end
 
 group :development do
@@ -68,5 +80,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> tmp
