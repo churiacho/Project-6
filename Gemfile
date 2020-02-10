@@ -12,6 +12,8 @@ gem 'omniauth-facebook'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'gravatar'  
 gem 'carrierwave', '~> 2.0'
+gem 'carrierwave-aws'
+gem 'mini_magick'
 gem 'aws-sdk-s3', require: false
 # Use pg as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
