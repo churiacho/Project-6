@@ -61,7 +61,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "moveandgroove_production"
   
   # ActionMailer Config
-  config.action_mailer.default_url_options - = { :host => 'https://moveandgroove-julia.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://moveandgroove-julia.herokuapp.com' }
 
 
   ActionMailer::Base.delivery_method = :smtp
