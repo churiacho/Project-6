@@ -1,15 +1,15 @@
 class User < ApplicationRecord
 
   has_many :activities , dependent: :destroy
-  # has_one_attached :avatar
-  mount_uploader :avatar, AvatarUploader
+  has_one_attached :avatar
+  # mount_uploader :avatar, AvatarUploader
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :registerable, :omniauthable
   devise :database_authenticatable, :recoverable, :rememberable, :validatable, :registerable, :omniauthable, :omniauth_providers => [:facebook]
   # verify your schema for the additional fields/columns
 
-  validates :avatar, presence: true, integrity: true, processing: true
+  # validates :avatar, presence: true, integrity: true, processing: true
 
 
 def self.new_with_session(params, session)
