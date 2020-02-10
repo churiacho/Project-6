@@ -32,13 +32,6 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-gem 'devise', '~>4.7', '>=4.7.1'
-gem 'omniauth-facebook', '~> 6.0'
-gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
-gem 'gravatar'  
-gem 'carrierwave', '~> 2.0'
-gem 'fog-aws', '~> 3.5', '>= 3.5.2'
-gem 'figaro'
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
@@ -48,16 +41,11 @@ end
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-<<<<<<< HEAD
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+# Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
   gem 'better_errors', '~> 2.5', '>= 2.5.1'
-
-=======
- #  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
->>>>>>> tmp
 end
 
 group :development do
@@ -80,8 +68,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-<<<<<<< HEAD
-
-
-=======
->>>>>>> tmp
