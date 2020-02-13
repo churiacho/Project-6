@@ -1,43 +1,47 @@
-<div class="d-flex flex-column justify-content-center">
-<p id="notice"><%= notice %></p>
 
-<div class="jumbotron">
-<h1>Activities</h1>
-</div>
+    <div class="jumbotron my-5 display-2 p-5">
+      Activities
+    </div>
 
-<table class="container" id="activity-table">
-  <thead class="jumbotron">
-    <tr>
-      <th>Activity</th>
-      <th>Date</th>
-      <th>Duration</th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="container my-5">
+  <div class="d-flex flex-column justify-content-center">
+    <p id="notice"><%= notice %></p>
 
-  <tbody>
-  
-    <% @activities.each do |activity| %>
 
-      <tr id="overlay">
-        <td><%=  activity.name %></td>
-        <td><%=  activity.date_field.to_formatted_s(:rfc822) %></td>
-        <td>
-          <%=  activity.duration_minutes %> minutes
-        </td>
-        <td id="activity-change">
-        <%= link_to 'Edit', edit_activity_path(activity), id: 'lnk-yellow' %>
-        <%= link_to 'x', activity, method: :delete, data: { confirm: 'Are you sure?' }, id:'del' %>
-        </td>
+    <table class="container" id="activity-table">
+      <thead class="jumbotron">
+        <tr>
+          <th>Activity</th>
+          <th>Date</th>
+          <th>Duration</th>
+          <th></th>
+        </tr>
+      </thead>
 
-      </tr>
+      <tbody>
 
-    <% end %>
-  
-  </tbody>
-</table>
+        <% @activities.each do |activity| %>
 
-<br>
+        <tr id="overlay">
+          <td><%=  activity.name %></td>
+          <td><%=  activity.date_field.to_formatted_s(:rfc822) %></td>
+          <td>
+            <%=  activity.duration_minutes %> minutes
+          </td>
+          <td id="activity-change">
+            <%= link_to 'Edit', edit_activity_path(activity), id: 'lnk-yellow' %>
+            <%= link_to 'x', activity, method: :delete, data: { confirm: 'Are you sure?' }, id:'del' %>
+          </td>
 
-<span><%= link_to 'New Activity', new_activity_path, class: "btn btn-outline-success", id: 'lnk-green' %></span>
+        </tr>
+
+        <% end %>
+
+      </tbody>
+    </table>
+
+    <br>
+
+    <span><%= link_to 'New Activity', new_activity_path, class: "btn btn-outline-success", id: 'lnk-green' %></span>
+  </div>
 </div>

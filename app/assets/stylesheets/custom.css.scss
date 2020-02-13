@@ -1,7 +1,15 @@
 @import 'bootstrap/dist/css/bootstrap';
+#activity-form {
+    background-color: pink;
+}
+
+#activity-container {
+    background-color: blueviolet;
+}
 
 .jumbotron {
     text-align: center;
+    background-color: rgb(135, 253, 202) !important;
 }
 
 #activity-table {
@@ -74,19 +82,17 @@
         transition: 0.2s ease;
     }
 }
-#nav-lnk {
-    color: #ffffff;
-    padding: 0.5em;
-    border-radius: 5px;
+.nav-lnk {
+    color: #ffffff !important;
+    padding: 0.5em !important;
     text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
     &:hover {
-        background-color: white;
-        color: black;
+        background-color: white !important;
+        color: black !important;
     }
 }
-#nav-msg {
-    color: white;
-}
+
 #btn-yel {
     color: orange;
     &:hover {
@@ -105,3 +111,48 @@
 .header_gravatar {
     border-radius: 50% !important;
 }
+
+
+.dropdown-item {
+    color: white !important;
+    font-size: 0.8em !important;
+    &:hover {
+        color: black !important;
+    }
+}
+
+.navbar-brand {
+    color: white !important;
+    margin: 0;
+    
+    &:hover {
+        background-color: transparent;
+        color: black !important;
+    }
+    svg {
+        fill: white;
+        height: 2em;
+        margin: 0;
+        &:hover {
+            fill: black;
+        }
+    }
+}
+
+.navbar {
+    padding: 0;
+    #avatar {
+        width: 2em;
+        height: 100%;
+        margin: 0 25% 0 0;
+    }
+    .nav-link {
+        height: 100%;
+    }
+}
+
+#avatar {
+    width: 100%;
+    height: 100%;
+}
+

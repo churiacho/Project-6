@@ -1,23 +1,58 @@
-<div class="jumbotron display-4"><%= current_user.username %>'s Profile</div>
-<div class="container">
+<div class="jumbotron mt-5 p-5 display-4"><%= @user.first_name %> <%= @user.last_name %>'s Account</div>
+  <div class="container">
 
-  <div class="card my-5">
-    <% if current_user.avatar.attached? %>
-      <%= image_tag user_avatar(current_user, 100), class: "rounded card-img-top" %>
-    <% end %>
+    <div class="row">
+      
+      <div class="card col-3">
 
-    <%# if current_user.gravatar_for.attached? %>
-      <%#= gravatar_for @user %>
-    <%# end %>
-    
-    <div class="card-body">
-      <h2 class="card-title my-2"><%= current_user.first_name %> <%= current_user.last_name %></h2>
-      <p class="card-text"><%= current_user.bio %></p>
-      <h5 class="card-text">Age: <%= current_user.age %></h5>
+        <% if @user.avatar.attached? %>
+          <%= image_tag @user.avatar, class: "card-body p-0", id: "avatar" %>
+        <% end %>
+
+      </div>
+
+      <div class="col-9">
+
+      
+
+          <div class="card text-center">
+            <div class="card-header">
+              <h1 class="card-title">About me</h1>
+            </div>
+            <div class="card-body">
+              <p class="card-text"><%= @user.bio %></p>
+            </div>
+          </div>
+
+        
+
+        <div class="row">
+          <%= link_to "Edit account details", edit_user_profile_path(@user), class: "btn btn-outline-warning offset-4", id: "btn-yel" %>
+        </div>
+
+      </div>
+
     </div>
-  </div>
 
-</div>
-<div class="container">
-  <%= link_to "Edit account details", edit_user_profile_path(current_user), class:"btn btn-outline-warning", id: 'btn-yel'%>
-</div>
+    <div class="row">
+
+      <div class="col-3 my-4">
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">Name</th>
+              <td><%= @user.first_name %> <%= @user.last_name %></td>
+            </tr>
+            <tr>
+              <th scope="row">Age</th>
+              <td><%= @user.age %></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>

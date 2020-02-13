@@ -11,6 +11,19 @@ class User < ApplicationRecord
 
   # validates :avatar, presence: true, integrity: true, processing: true
 
+  attr_accessor :remove_avatar
+
+  # :state_event
+  # after_save :trigger_state, if: :state_event
+  # private def trigger_state
+  #   send(state_event) if send(:"can_#{state_event}?")
+  # end
+
+  after_save :purge_avatar, if: :remove_avatar
+  private def purge_avatar
+    avatar.purge_later
+  end
+
 
 def self.new_with_session(params, session)
   super.tap do |user|

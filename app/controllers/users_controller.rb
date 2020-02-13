@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     #     @avatar = Avatar.find(params[:id])
     # end
 
+
     private
 
     def get_user

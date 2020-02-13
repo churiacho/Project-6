@@ -1,3 +1,6 @@
+<div class="jumbotron jumbotron-fluid display-2 p-5">Add Activity</div>
+
+
 <%= form_with(model: activity, local: true) do |form| %>
   <% if activity.errors.any? %>
     <div id="error_explanation">
@@ -10,20 +13,21 @@
       </ul>
     </div>
   <% end %>
+ 
 
-  <div class="field">
-    <%= form.label "Activity Name" %>
-    <%= form.select :name, Activity.names.keys.map %>
+  <div class="form-group">
+    
+    <%= form.select :name, Activity.names.keys.map, prompt: "Please select an activity", class: "form-field" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Date" %>
-    <%= form.date_select :date_field %>
+    <%= form.datepicker :date_field, as: :bootstrap_datepicker, input_html: { format: :long } %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Duration" %>
-    <%= form.number_field :duration_minutes %><p>Minutes</p>
+    <%= form.number_field :duration_minutes %> minutes
   </div>
 
 
@@ -31,3 +35,7 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<script>
+$('#datepicker').datepicker({format: 'yyyy-mm-dd'});
+</script>
