@@ -7,9 +7,9 @@ class UsersController < ApplicationController
         @user.avatar.attach(params[:avatar])
     end
 
-    # def show
-    #     @avatar = Avatar.find(params[:id])
-    # end
+    def show
+        @avatar = Avatar.find(params[:id])
+    end
 
 
     private

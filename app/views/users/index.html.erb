@@ -1,4 +1,4 @@
-<div class="jumbotron mt-5 p-5 display-4"><%= @user.first_name %> <%= @user.last_name %>'s Account</div>
+<div class="jumbotron p-5 display-2"><%= @user.first_name %> <%= @user.last_name %>'s Account</div>
   <div class="container">
 
     <div class="row">
@@ -7,6 +7,8 @@
 
         <% if @user.avatar.attached? %>
           <%= image_tag @user.avatar, class: "card-body p-0", id: "avatar" %>
+        <% else %>
+          <div class="display-4">No avatar uploaded</div>
         <% end %>
 
       </div>

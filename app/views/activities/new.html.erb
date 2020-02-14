@@ -1,5 +1,6 @@
-<h1>New Activity</h1>
+<div class="jumbotron jumbotron-fluid display-2 p-5" id="act-new-jumbo">Add Activity</div>
+<div class="container p-5">
+    <%= render 'form', activity: @activity %>
 
-<%= render 'form', activity: @activity %>
-
-<%= link_to 'Back', activities_path %>
+    <%= link_to 'Back', activities_path, class: "btn btn-outline-info", id: "lnk-theme" %>
+</div>

@@ -5,5 +5,8 @@ class Activity < ApplicationRecord
   validates :duration_minutes, presence: true
   validates :date_field, presence: true
 
+  def avatar
+    current_user.attach(params[:avatar])
+  end
 
 end

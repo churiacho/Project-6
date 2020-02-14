@@ -1,6 +1,4 @@
-<div class="jumbotron jumbotron-fluid display-2 p-5">Add Activity</div>
-
-
+<div class="container d-flex justify-content-center pb-5">
 <%= form_with(model: activity, local: true) do |form| %>
   <% if activity.errors.any? %>
     <div id="error_explanation">
@@ -22,7 +20,7 @@
 
   <div class="form-group">
     <%= form.label "Date" %>
-    <%= form.datepicker :date_field, as: :bootstrap_datepicker, input_html: { format: :long } %>
+    <%= form.date_select :date_field %>
   </div>
 
   <div class="form-group">
@@ -36,6 +34,4 @@
   </div>
 <% end %>
 
-<script>
-$('#datepicker').datepicker({format: 'yyyy-mm-dd'});
-</script>
+</div>

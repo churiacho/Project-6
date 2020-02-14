@@ -58,7 +58,7 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity.destroy
     respond_to do |format|
-      format.html { redirect_to activities_url, notice: 'Activity was successfully deleted.' }
+      format.html { redirect_to activities_url, alert: 'Activity was successfully deleted.' }
       format.json { head :no_content }
     end
   end

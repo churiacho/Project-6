@@ -1,20 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron jumbotron-fluid p-5" id="act-show-jumbo">
+  <h1 class="display-2"><%= @activity.date_field.to_formatted_s(:long) %></h1>
+</div>
+<div class="container">
 
-<p>
-  <strong>Activity Name:</strong>
+<div class="container d-flex justify-content-between display-3 mb-5 p-5" id="act-show">
+
   <%= @activity.name %>
-</p>
+  
+<span> for </span>
 
-<p>
-  <strong>Date:</strong>
-  <%= @activity.date_field.to_formatted_s(:long) %>
-</p>
-
-<p>
-  <strong>Duration:</strong>
   <%= @activity.duration_minutes %> minutes
-</p>
 
+</div>
 
-<%= link_to 'Edit', edit_activity_path(@activity) %> |
-<%= link_to 'Back', activities_path %>
+<%= link_to 'Edit', edit_activity_path(@activity), class: "btn btn-outline-warning", id: "btn-yel" %>
+<%= link_to 'Back', activities_path, class: "btn btn-outline-info", id: "lnk-theme" %>
+</div>
