@@ -65,7 +65,6 @@ ActiveRecord::Schema.define(version: 2020_01_30_204532) do
     t.string "username"
     t.integer "age"
     t.text "bio"
-    t.string "profile_pic"
     t.string "provider"
     t.string "uid"
     t.string "name"
