@@ -91,8 +91,8 @@
     }
 }
 .nav-lnk {
-    color: #ffffff !important;
-    padding: 0.5em !important;
+    color: hsl(0, 0%, 100%) !important;
+    // padding: 0.5em !important;
     text-align: center;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
     &:hover {
@@ -107,19 +107,6 @@
         color: white;
     }
 }
-.gravatar {
-    padding: 0.25rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    max-width: 100%;
-    height: auto;
-}
-
-.header_gravatar {
-    border-radius: 50% !important;
-}
-
 
 .dropdown-item {
     color: white !important;
@@ -163,6 +150,9 @@
 #avatar {
     width: 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: scale-down;
 
 }
 
