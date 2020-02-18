@@ -13,12 +13,17 @@
   </head>
 
   <body>
-    <header class="fixed-top my-auto">
+    <header>
       <%= render 'layouts/navigation' %>
       <%= render 'layouts/devise_notices' %>
     </header>
-    <main class="m-5 p-5">
+    <main>
+    <div>
       <%= content_for?(:content) ? yield(:content) : yield %>
+    </div>
     </main>
+    <footer>
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
 </html>

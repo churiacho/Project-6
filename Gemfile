@@ -7,7 +7,7 @@ ruby '2.7.0'
 gem 'dotenv-rails', groups: [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
-gem 'devise', '~>4.7', '>=4.7.1'
+gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'omniauth-facebook'
 gem 'activestorage'
 # gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'

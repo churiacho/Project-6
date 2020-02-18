@@ -1,7 +1,8 @@
 class ActivitiesController < ApplicationController
   before_action :authenticate_user!
   before_action :get_user
-  before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :own_activity, only: [:edit, :update, :show, :destroy]
+  # before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   # GET /activities
   # GET /activities.json
@@ -68,13 +69,21 @@ class ActivitiesController < ApplicationController
       @user = current_user
     end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_activity
+    def own_activity
       @activity = Activity.find(params[:id])
+      unless current_user == @activity.user
+        redirect_to(activities_path, alert: "You are not authorized to edit this activity.")
+      end
     end
+
+    # Use callbacks to share common setup or constraints between actions.
+    # def set_activity
+    #     @activity = Activity.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
       params.require(:activity).permit(:name, :date_field, :duration_minutes )
     end
-end
+
+  end

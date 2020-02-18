@@ -1,34 +1,25 @@
-<div id="homeCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#homeCarousel" data-slide-to="1"></li>
-        <li data-target="#homeCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" >
-        <div class="carousel-item-active">
-            <svg class="bd-placeholder-img bd-placehold-img-lg d-block w-100" width="800" height="400" xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" 
-            focusable="false" role="img" aria-label="Placeholder: First slide">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777"></rect>
-                <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
-            </svg>
+<div class="container my-0 mx-0 px-0">
+    <%= render 'header'%>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="card m-5 col-6" id="home-card">
+                <%= image_tag("2.jpg", class: "img-fluid card-img-top", id: "home-card-img", alt: "Active woman") %>
+                <div class="card-body text-align-center">
+                    <h5 class="card-title">Keep track of your activity</h5>
+                    <% if user_signed_in? %>
+                        <%= link_to "Go to your activity log", activities_path, class: "btn btn-primary" %>
+                    <% else %>
+                        <%= button_tag "Start logging your activity", :onclick => "login()", class: "btn btn-primary", %>
+                </div>
+            </div>
+
         </div>
-        <div class="carousel-item">
-            <svg class="bd-placeholder-img bd-placehold-img-lg d-block w-100" width="800" height="400" xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" 
-            focusable="false" role="img" aria-label="Placeholder: Second slide">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#666"></rect>
-                <text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text>
-            </svg>
-        </div>
-        <div class="carousel-item">
-            <svg class="bd-placeholder-img bd-placehold-img-lg d-block w-100" width="800" height="400" xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" 
-            focusable="false" role="img" aria-label="Placeholder: Third slide">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#555"></rect>
-                <text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text>
-            </svg>
-        </div>
+
     </div>
 
 </div>
+
+

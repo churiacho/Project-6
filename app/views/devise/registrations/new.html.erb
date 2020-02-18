@@ -6,8 +6,13 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="col-4 offset-4">
   <div class="field"><%# mb-6 %>
-    <%= f.label :username, class:"label" %><br />
-    <%= f.text_field :username, autofocus: true, class:"input col-12" %>
+    <%= f.label :first_name, class:"label" %><br />
+    <%= f.text_field :first_name, autofocus: true, class:"input col-12" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :last_name, class:"label" %><br />
+    <%= f.text_field :last_name, autofocus: true, class:"input col-12" %>
   </div>
 
   <div class="field">
