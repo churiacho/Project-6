@@ -176,6 +176,11 @@
     overflow: hidden;
 }
 
+#home-card-img {
+    object-fit: cover !important;
+    height: 100%;
+}
+
 #move-img {
     height: 100%;
     object-fit: cover;
@@ -212,5 +217,53 @@ header {
 
     .display-4 {
         font-size: 1.5em !important;
+    }
+}
+
+@media only screen and (max-width: 1415px) {
+    #home-card {
+        .card-text {
+           margin: 0.5rem !important;
+           padding: 0.5rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    #home-card {
+        margin: 1rem !important;
+        .display-4 {
+            font-size: 2rem !important;
+        }
+        .display-2 {
+            font-size: 3rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    #home-card {
+        margin: 0 !important;
+        height: 50vh;
+        .card-title {
+            margin: 0 !important;
+            padding: none !important;
+        }
+        .card-text {
+            margin: 0 !important;
+            padding: none !important;   
+        }
+        .display-2 {
+            font-size: 2rem !important;
+        }
+        .display-4 {
+            font-size: 1rem !important;
+        }
+        .btn-lg {
+            font-size: 0.8rem !important;
+        }
+    }
+    .footer {
+        margin: 0 !important;
     }
 }
