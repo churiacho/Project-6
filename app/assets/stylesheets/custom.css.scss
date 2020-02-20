@@ -1,12 +1,13 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 //General styles
+
 .jumbotron {
     text-align: center;
     background-color: rgb(135, 253, 202) !important;
 }
 
-.footer {
+footer {
     margin: 2rem 0 0 0;  
     width: 100%;  
     background-color: rgb(46, 31, 154) !important;
@@ -127,6 +128,12 @@ header {
     }
 }
 
+// Devise pages styles
+#pw-recovery {
+    height: 100%;
+    min-height: 50vh;
+}
+
 // Home Page Views
 
 #home {
@@ -158,6 +165,11 @@ header {
 }
 
 // Activity Views Styles
+
+#act-index {
+    height: 100%;
+    min-height: 50vh;
+}
 
 #activity-form {
     background-color: pink;
@@ -261,9 +273,6 @@ header {
         .btn-lg {
             font-size: 0.8rem !important;
         }
-    }
-    #profile-head {
-        margin: 0 !important;
     }
     .profile {
         h1 {

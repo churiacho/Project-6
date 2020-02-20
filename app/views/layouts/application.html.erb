@@ -18,11 +18,11 @@
       <%= render 'layouts/devise_notices' %>
     </header>
     <main>
-    <div>
+    <div class="main">
       <%= content_for?(:content) ? yield(:content) : yield %>
     </div>
     </main>
-    <footer class="footer mb-0 p-1">
+    <footer class="p-1">
       <%= render 'layouts/footer' %>
     </footer>
   </body>
