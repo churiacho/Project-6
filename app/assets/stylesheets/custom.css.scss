@@ -1,54 +1,73 @@
 @import 'bootstrap/dist/css/bootstrap';
 
-#activity-form {
-    background-color: pink;
-}
-
-#activity-container {
-    background-color: blueviolet;
-}
-
+//General styles
 .jumbotron {
     text-align: center;
     background-color: rgb(135, 253, 202) !important;
 }
 
-#activity-table {
-    text-align: center;
+.footer {
+    margin: 2rem 0 0 0;  
+    width: 100%;  
+    background-color: rgb(46, 31, 154) !important;
+    padding: 0 !important;
+}
+
+header {
+    margin: 0;
+}
+
+#avatar {
     width: 100%;
-    border-collapse: collapse;
-    border-bottom: 1px solid grey;
-
-    th {
-        font-size: 1.3rem;
-        padding: 1em 0;
-        border-bottom: 1px solid grey;
-    }
-
-    td {
-        padding: 1em 0;
-    }
-
-    #overlay {
-        background-color: rgba(176, 224, 245, 0.517);
-        border-bottom: 1px solid grey;
-
-        &:hover {
-            background-color: rgba(176, 224, 245, 0.7);
-        }
-    }
-
-
-    
-
-    #activity-change {
-        border-top: 1px solid grey;
-        border-bottom: 1px solid grey;
-        padding: none;
- 
-    }
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: scale-down;
 
 }
+
+// Navigation styles
+
+.dropdown-item {
+    color: white !important;
+    font-size: 0.8em !important;
+    &:hover {
+        color: black !important;
+    }
+}
+
+.navbar-brand {
+    color: white !important;
+    margin: 0;
+    
+    &:hover {
+        background-color: transparent;
+        color: black !important;
+    }
+    svg {
+        fill: white;
+        height: 2em;
+        margin: 0;
+        &:hover {
+            fill: black;
+        }
+    }
+}
+
+.navbar {
+    padding: 0;
+    width: 100%;
+    #avatar {
+        width: 2em;
+        height: 100%;
+        margin: 0 25% 0 0;
+    }
+    .nav-link {
+        height: 100%;
+    }
+}
+
+// Link styles
 #lnk-green {
     color: green;
     &:hover {
@@ -108,65 +127,7 @@
     }
 }
 
-.dropdown-item {
-    color: white !important;
-    font-size: 0.8em !important;
-    &:hover {
-        color: black !important;
-    }
-}
-
-.navbar-brand {
-    color: white !important;
-    margin: 0;
-    
-    &:hover {
-        background-color: transparent;
-        color: black !important;
-    }
-    svg {
-        fill: white;
-        height: 2em;
-        margin: 0;
-        &:hover {
-            fill: black;
-        }
-    }
-}
-
-.navbar {
-    padding: 0;
-    width: 100%;
-    #avatar {
-        width: 2em;
-        height: 100%;
-        margin: 0 25% 0 0;
-    }
-    .nav-link {
-        height: 100%;
-    }
-}
-
-#avatar {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    object-fit: scale-down;
-
-}
-
-#act-show-jumbo {
-    background-color: rgb(83, 223, 99) !important;
-}
-
-#act-new-jumbo {
-    background-color: rgba(108, 86, 238, 0.748) !important;
-}
-
-#act-edit-jumbo {
-    background-color: rgb(245, 183, 89) !important;
-}
+// Home Page Views
 
 #home {
     margin: 0;
@@ -196,29 +157,64 @@
     opacity: 0.7;
 }
 
+// Activity Views Styles
 
-.footer {
-    margin: 2rem 0 0 0;  
-    width: 100%;  
-    background-color: rgb(46, 31, 154) !important;
-    padding: 0 !important;
+#activity-form {
+    background-color: pink;
 }
 
-header {
-    margin: 0;
+#activity-container {
+    background-color: blueviolet;
 }
 
+#activity-table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid grey;
 
-
-@media only screen and (max-width: 355px) {
-    .display-2 {
-        font-size: 2em !important;
+    th {
+        font-size: 1.3rem;
+        padding: 1em 0;
+        border-bottom: 1px solid grey;
     }
 
-    .display-4 {
-        font-size: 1.5em !important;
+    td {
+        padding: 1em 0;
+    }
+
+    #overlay {
+        background-color: rgba(176, 224, 245, 0.517);
+        border-bottom: 1px solid grey;
+
+        &:hover {
+            background-color: rgba(176, 224, 245, 0.7);
+        }
+    }
+
+    #activity-change {
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        padding: none;
+ 
     }
 }
+#act-show-jumbo {
+    background-color: rgb(83, 223, 99) !important;
+}
+
+#act-new-jumbo {
+    background-color: rgba(108, 86, 238, 0.748) !important;
+}
+
+#act-edit-jumbo {
+    background-color: rgb(245, 183, 89) !important;
+}
+
+// Profile Page styles
+
+
+// Media Queries
 
 @media only screen and (max-width: 1415px) {
     #home-card {
@@ -232,16 +228,25 @@ header {
 @media only screen and (max-width: 1080px) {
     #home-card {
         margin: 1rem !important;
-        .display-4 {
-            font-size: 2rem !important;
-        }
-        .display-2 {
-            font-size: 3rem !important;
-        }
+    }
+    .display-4 {
+        font-size: 2rem !important;
+    }
+    .display-2 {
+        font-size: 3rem !important;
     }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 720px) {
+    .display-2 {
+        font-size: 2rem !important;
+    }
+    .display-4 {
+        font-size: 1rem !important;
+    }
+    .footer {
+        margin: 0 !important;
+    }
     #home-card {
         margin: 0 !important;
         height: 50vh;
@@ -253,17 +258,49 @@ header {
             margin: 0 !important;
             padding: none !important;   
         }
-        .display-2 {
-            font-size: 2rem !important;
-        }
-        .display-4 {
-            font-size: 1rem !important;
-        }
         .btn-lg {
             font-size: 0.8rem !important;
         }
     }
-    .footer {
+    #profile-head {
         margin: 0 !important;
+    }
+    .profile {
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px){
+    #act-index {
+        padding: none !important;
+        margin: 0 !important;
+    }
+    #activity-table {
+        margin: 0 !important;
+        padding: none !important;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    .display-2 {
+        font-size: 2em !important;
+    }
+
+    .display-4 {
+        font-size: 1.5em !important;
+    }
+    th {
+        font-size: 1em !important;
+        font-weight: 7 !important;
+    }
+    td {
+        font-weight: 4 !important;
+        padding: 0.3rem 0 !important;
+    }
+    #lnk-yellow {
+        margin-bottom: 2rem !important;
     }
 }
