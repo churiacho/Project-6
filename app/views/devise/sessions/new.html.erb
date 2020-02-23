@@ -2,7 +2,7 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-<div class="container col-4 offset-4 justify-content-center">
+<div class="container col-4 offset-4 justify-content-center" id="container">
 
   <div class="field">
     <%= f.label :email %><br />
@@ -22,7 +22,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit class: 'btn btn-block btn-primary', value: "Sign In", id: "button" %><br />
+    <%= f.submit value: "Sign In", class: 'btn btn-block btn-primary'  %><br />
   </div>
   <div class="col-8 container">
     <%= render "devise/shared/links" %>

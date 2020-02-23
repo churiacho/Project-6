@@ -129,9 +129,9 @@ header {
 }
 
 // Devise pages styles
-#pw-recovery {
+#container {
     height: 100%;
-    min-height: 50vh;
+    min-height: 56vh;
 }
 
 // Home Page Views
@@ -140,7 +140,7 @@ header {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     overflow: hidden;
 }
 
@@ -165,11 +165,6 @@ header {
 }
 
 // Activity Views Styles
-
-#act-index {
-    height: 100%;
-    min-height: 50vh;
-}
 
 #activity-form {
     background-color: pink;
@@ -311,5 +306,9 @@ header {
     }
     #lnk-yellow {
         margin-bottom: 2rem !important;
+    }
+
+    #home {
+        height: 30vh;
     }
 }
